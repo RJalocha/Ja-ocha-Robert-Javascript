@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="maps.css" rel="stylesheet" type="text/css">
+</head>
+<script src="../libs/jquery.js"></script>
+</head>
+
+<body>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+        </li>
+    </ul>
+    <div class="game-menu" id="game-menu">
+        <div class="start-game" onclick="startGame()">
+            <h1>Start Game</h1>
+        </div>
+        <div class="timer" id="timer-container">
+            <h3 id="timer">5</h3>
+        </div>
+        <div class="game-ower" id="game-ower">
+            <h3>Game Ower</h3>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="maps.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARkS-dsh-7IirtcQg3oSZEHudV6Uw9Iic&callback=initMap">
+        </script>
+    <script>
+        $('#timer-container').hide();
+        $('#game-ower').hide();
+    </script>
+</body>
+
+</html>
